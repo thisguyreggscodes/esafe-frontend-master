@@ -1,0 +1,701 @@
+@font-face {
+    font-family: "poppins";
+    src: url(./fonts/poppins-regular.ttf)  format("truetype");
+}
+
+@font-face {
+    font-family: "restora";
+    src: url(./fonts/restora.otf);
+}
+
+:root{
+    --maincolor : #3AC2B2;
+    --regularFont : 400;
+    --mediumFont : 500;
+    --boldFont : 600;
+    --regularFF : poppins, sans-serif;
+    --subFF : restora, sans-serif;
+    --fontsubcolor : rgba(44, 87, 110, 0.65);
+    --fontmaincolor : rgba(44, 87, 110, 1)
+}
+
+*{
+    font-weight: var(--mediumFont);
+    font-family: poppins, sans-serif;
+}
+.material-icons{
+    font-size: inherit;
+}
+body{
+    background-color: #f0f7f6;
+}
+
+.ff-restora {
+    font-family: var(--subFF) !important;
+}
+
+.ff-poppins {
+    font-family: var(--regularFF) !important;
+}
+
+.fw-bold{
+    font-weight: var(--boldFont) !important;
+}
+
+.fw-medium{
+    font-weight: var(--mediumFont) !important;
+}
+
+.custom-logo img{
+    max-width: 200px;
+    height: auto;
+}
+
+.bg-main{
+    background-color: var(--maincolor);
+}
+
+.text-subcolor{
+    color:var(--fontsubcolor) !important
+}
+
+.text-maincolor{
+    color:var(--maincolor) !important
+}
+
+.text-boldcolor{
+    color:var(--fontmaincolor) !important
+}
+
+.d-grid{
+    display:grid !important;
+}
+
+.grid-gap1{
+    grid-gap: 5px;
+}
+
+.grid-gap2{
+    grid-gap: 10px;
+}
+
+.border-green-3 {
+    border: 3px solid #3AC2B2;
+  }
+
+.border-colornone{
+    border-color: rgba(0,0,0,0) !important;
+}
+
+.border-maincolor{
+    border-color : var(--maincolor) !important;
+}
+
+.border-hover:hover{
+    transition: all 0.3s ease-in-out !important;
+    transform-origin: center;
+    border-color: var(--maincolor) !important;
+}
+
+.main-hover:hover{
+    transition: all 0.3s ease-in-out !important;
+    box-shadow: 0px 16px 28px 0px rgba(44, 87, 110, 0.1) !important;
+}
+
+.grid-gap3{
+    grid-gap: 15px;
+}
+
+.grid-col2{
+    grid-template-columns: 1fr 1fr;
+}
+
+.input-mainbg{
+    background-color: rgba(240, 247, 246, 1);
+}
+
+input,
+select,
+textarea{
+    box-shadow: unset !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color: #3AC2B2 !important;
+}
+
+label{
+    cursor: pointer !important;
+}
+
+input:checked{
+    background-color: var(--maincolor) !important;
+}
+
+.list-msg {
+    height: 700px;
+    border-top-left-radius: 10px;
+    border-right: 1px solid #eee;
+    background: white;
+    overflow: auto;
+  }
+  .list-msg-mobile {
+    height: 700px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-right: 1px solid #eee;
+    background: white;
+    overflow: auto;
+  }
+  .msg-box {
+    overflow: hidden;
+  }
+  .msg-box-mobile {
+    overflow: hidden;
+    display: none;
+  }
+  .msg-content {
+    border-top-right-radius: 10px;
+  }
+  .selected-user * {
+    background: #3ac2b2;
+    color: white !important;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .msg-profile {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 2px;
+    border: 2px solid rgba(58, 194, 178, 1);
+  }
+  .msg-play-ground {
+    background: url("images/message/background.png") no-repeat;
+    background-size: cover;
+    height: 75%;
+  }
+  .msg-play-ground-mobile {
+    background: url("images/message/background.png") no-repeat;
+    background-size: cover;
+    height: 80%;
+    overflow-y: scroll;
+  }
+  
+  .text-green{
+    color:#11A694;
+  }
+
+  .msg-details-to .convo {
+    background: #ffffff;
+    color: #485761;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .msg-details-from .convo {
+    background-color: rgba(58, 194, 178, 1);
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .msg-details-from div,
+  .msg-details-to div {
+    font-family: Poppins;
+  }
+  .msg-details-from .date,
+  .msg-details-to .date {
+    opacity: 0.75;
+  }
+  .text-msg {
+    border-radius: 25px;
+  }
+  .mobile-msg-content {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 10000;
+  }
+
+@media only screen and (max-width: 350px) {
+    .login-form{
+        padding:15px !important
+    }
+}
+@media only screen and (max-width: 600px) {
+    .grid-col2{
+        grid-template-columns: unset !important;
+    }
+    .navigate-btn-container{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .navigate-btn-container kbd{
+        display:none !important;
+    }
+    #footer{
+        flex-direction: column !important;
+    }
+    #footer section > div{
+        justify-content: start !important;
+    }
+    #footer section:nth-child(2) > div > div{
+        width: 100%;
+        max-width: unset !important;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+/***********************************************
+***********************************************/
+
+/* CLASSES FOR USE TO CHANGE THINGS */
+.bt-calendar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 ;
+}
+
+.bt-calendar .calendar-wrapper {
+    width: 100%;
+}
+
+.bt-calendar .calendar-table {
+  width: 100%;
+  display: inline-block;
+}
+
+
+/* calendar-month-zone header */
+.bt-calendar .calendar-table .calendar-month-zone {
+    padding: 20px;
+    width: auto;
+    background: #fff;
+    text-align: center;
+    color: #222;
+}
+.bt-calendar .calendar-table .calendar-month-zone .month {
+    display: flex;
+    align-items: center;
+}
+.bt-calendar .calendar-table .calendar-month-zone .month .monthly-select {
+    width: fit-content;
+    border: unset;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: -0.01em;
+    color: #2C576E;
+}
+.calendar--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 42px;
+    height: 42px;
+    background: rgba(45, 57, 64, 0.1);
+    border-radius: 100%;
+    margin-right: 10px;
+    color: rgba(44, 87, 110, 0.65);
+    font-size: 22px;
+}
+.bt-calendar .calendar-table .calendar-month-zone .button-wrapper {
+    display: flex;
+    align-items: center;
+}
+.bt-calendar .calendar-table .calendar-month-zone .button-wrapper .navigation-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 42px;
+    height: 42px;
+    background: rgba(45, 57, 64, 0.1);
+    border-radius: 100%;
+    margin-left: 8px;
+    border: unset;
+    color: rgba(44, 87, 110, 0.65);
+    font-size: 26px;
+}
+.bt-calendar .calendar-table .calendar-month-zone .button-wrapper .today-btn {
+    background: #DFF2EE;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.01em;
+    color: #11A694;
+    opacity: 0.7;
+    border: unset;
+}
+
+
+
+/* Weekdays (Mon-Sun) */
+.bt-calendar.weekly-layout .calendar-table .weekdays {
+    padding-left: 10%;
+    display: flex;
+    border-bottom: 1px solid rgba(45, 57, 64, 0.1);
+}
+
+.bt-calendar.weekly-layout .calendar-table .weekdays li {
+    display: flex;
+    width: 14.283%;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    height: 91px;
+    border-left: solid 1px rgba(45, 57, 64, 0.1);
+}
+.bt-calendar.weekly-layout .calendar-table ul li.active .week-day-item,
+.bt-calendar.weekly-layout .calendar-table ul li.active .day-item {
+    color: #3AC2B2;
+}
+/**************************************
+    CALENDAR WEEKLY LAYOUT
+**************************************/
+
+.bt-calendar.weekly-layout .calendar-table .days>li {
+    list-style-type: none;
+    position: relative;
+    display: inline-block;
+    width: 14.283%;
+    text-align: center;
+    float: left;
+    margin: 0;
+    padding: 0;
+    min-height: 840px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #777;
+    border-left: solid 1px #d7dbdb;
+}
+.bt-calendar.weekly-layout .calendar-table .days>li:first-child {
+    border-left: unset;
+}
+
+.bt-calendar.weekly-layout .calendar-table ul.days {
+    width: 90%;
+    float: right;
+}
+
+.bt-calendar.weekly-layout .calendar-table ul.day-time {
+    width: 10%;
+    float: left;
+    display: inline-block;
+}
+
+.bt-calendar.weekly-layout .calendar-table ul.day-time li {
+    width: 100%;
+    height: 91px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(45, 57, 64, 0.1);
+}
+
+.bt-calendar.weekly-layout .calendar-table ul li .week-day-item {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #2D3940;
+    opacity: 0.5;
+}
+
+.bt-calendar.weekly-layout .calendar-table .day-item {
+    display: block;
+    text-align: center;
+    margin-top: 2px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -0.01em;
+    color: #485761;
+}
+.bt-calendar.weekly-layout .calendar-table ul.day-time li:last-child {
+    border-bottom: none;
+}
+
+.bt-calendar.weekly-layout .calendar-table ul.days li ul li {
+    height: 91px;
+}
+.hourly-container {
+    border-bottom: solid 1px #d7dbdb;
+}
+.half-hour-container {
+    cursor: pointer;
+    background: rgba(45, 57, 64, 0.1);
+    height: calc(100% / 2);
+    border-bottom: solid 1px #d7dbdb;
+}
+.half-hour-container:hover {
+    
+    background: rgb(77, 181, 242);
+    
+}
+.half-hour-container:last-child, .hourly-container:last-child {
+    border-bottom: unset;
+}
+
+/* scheds */
+.half-hour-container .more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.half-hour-container .video-btn,
+.half-hour-container .voice-btn ,
+.half-hour-container .chat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 12px;
+}
+
+.closed-sched {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+}
+.closed-sched h4 {
+    margin: 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: flex-end;
+    color: #2D3940;
+    opacity: 0.5;
+}
+.active-sched {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    position: static;
+    background: #3AC2B2;
+    height: 100%;
+}
+.active-sched h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin: 0px;
+}
+.unbooked-sched {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    position: static;
+    height: 100%;
+}
+.unbooked-sched h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #2D3940;
+    opacity: 0.5;
+    margin: 0px;
+}
+.open-sched {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    position: static;
+    height: 100%;
+    background: #FFFFFF;
+}
+.open-sched h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #3AC2B2;
+    margin: 0px;
+}
+
+.Cancelled-sched {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    position: static;
+    height: 100%;
+    background: #FFFFFF;
+}
+.Cancelled-sched h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: red;
+    margin: 0px;
+}
+
+/* CP MODAL */
+
+.cp-modal h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.01em;
+    color: #2C576E;
+    margin-bottom: 5px;
+}
+.cp-modal h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #2D3940;
+    margin-bottom: 0px;
+}
+.cp-modal h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #2D3940;
+    opacity: 0.5;
+    margin: 0px;
+}
+.cp-modal p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #485761;
+}
+.cp-modal .cp-status {
+    font-family: 'Poppins';
+    background: #3AC2B2;
+    border: 2px solid rgba(45, 57, 64, 0.1);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+.cp-modal .view--btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: flex-end;
+    color: #2D3940;
+    opacity: 0.5;
+    padding: 8px 12px;
+    border: 2px solid rgba(45, 57, 64, 0.1);
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.cp-modal a {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #485761;
+    text-decoration: unset;
+    border-bottom: 2px solid rgba(45, 57, 64, 0.1);
+}
+
+/* Custom Toggle */
+.custom--toggle {
+    position: relative;
+    margin: 10px;
+}
+.custom--toggle input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.custom--toggle input[type=checkbox] + label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 85px;
+    height: 37px;
+    left: 0px;
+    top: 0px;
+    border-radius: 38px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    background: rgba(45, 57, 64, 0.1);
+    color: #2D3940;
+    opacity: 0.5;
+}
+
+.custom--toggle input[type=checkbox]:checked + label {
+    background: #3AC2B2;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.custom--toggle input[type=checkbox]:checked + label img {
+    content: url(../assets/img/icon-msg-enable.svg);
+}
+.confirm--btn{
+    background: #DFF2EE;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #11A694;
+    opacity: 0.7;
+    border: unset;
+    width: 200px;
+    margin: auto;
+}
+.confirm--btn:hover {
+    background: #11A694 ;
+    color: #DFF2EE;
+    opacity: 1;
+}
