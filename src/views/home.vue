@@ -9,14 +9,14 @@
             <RouterLink to="/coming-soon" class="bg-white text-decoration-none main-hover border-hover rounded p-5 border border-4 border-colornone">
                 <center>
                     <img src="@/assets/img/plant.png" alt="" class="d-block" style="width:30px">
-                    <p class="mt-3 fw-bold text-muted" style="opacity:.5">SIGN UP AS A CLIENT</p>
+                    <p class="mt-3 fw-bold text-muted" style="opacity:.5">SIGN UP AS A CARE SEEKER</p>
                     <h3 class="ff-restora text-boldcolor">I'm looking for therapy</h3>
                 </center>
             </RouterLink>
             <RouterLink to="/careprovider/registration/general" class="bg-white text-decoration-none main-hover border-hover rounded p-5 border border-4 border-colornone">
                 <center>
                     <img src="@/assets/img/bag.png" alt="" class="d-block" style="width:30px">
-                    <p class="mt-3 fw-bold text-muted" style="opacity:.5">SIGN UP AS A THERAPIST</p>
+                    <p class="mt-3 fw-bold text-muted" style="opacity:.5">SIGN UP AS A CARE PROVIDER</p>
                     <h3 class="ff-restora text-boldcolor">I want to join the team</h3>
                 </center>
             </RouterLink>
