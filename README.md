@@ -1,1 +1,4 @@
-Start of registration localhost:3000/careprovider/register/general
+This is an old repository initialized AGAIN
+Built with Vite
+Use npm -i to install dependencies
+npm run dev to test development
